@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spots</title>
+    <meta name="description" content="An image-sharing social media website" />
+    <meta name="author" content="Marcelino Reyes" />
+    <meta
+      name="keywords"
+      content="social media, image sharing, social networking, online gallery, interactive web app"
+    />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./images/logo.svg" alt="Spots Logo" class="header__logo" />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/avatar.jpg"
+            alt="User Avatar"
+            class="profile__avatar"
+          />
+          <div class="profile__info">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__bio">Civil Aviator</p>
+            <button type="button" class="profile__edit-profile-button">
+              <img src="./images/pencil.svg" alt="Pencil Icon" />Edit Profile
+            </button>
+          </div>
+          <button type="button" class="profile__new-post-button">
+            <img src="./images/plus.svg" alt="Plus Icon" />New Post
+          </button>
+        </section>
+        <section class="posts page__section">
+          <ul class="posts__grid">
+            <li class="post">
+              <img
+                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Val Thorens"
+                class="post__media"
+              />
+              <div class="post__engagement-section">
+                <h2 class="post__caption">Val Thorens</h2>
+                <button type="button" class="post__like-button"></button>
+              </div>
+            </li>
+            <li class="post">
+              <img
+                src="./images/2-photo-by-ceiline-from-pexels.jpg"
+                alt="Restraunt terrace"
+                class="post__media"
+              />
+              <div class="post__engagement-section">
+                <h2 class="post__caption">Restraunt terrace</h2>
+                <button type="button" class="post__like-button"></button>
+              </div>
+            </li>
+            <li class="post">
+              <img
+                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                alt="An outdoor cafe"
+                class="post__media"
+              />
+              <div class="post__engagement-section">
+                <h2 class="post__caption">An outdoor cafe</h2>
+                <button type="button" class="post__like-button"></button>
+              </div>
+            </li>
+            <li class="post">
+              <img
+                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                alt="A very long bridge over the forest"
+                class="post__media"
+              />
+              <div class="post__engagement-section">
+                <h2 class="post__caption">
+                  A very long bridge over the forest
+                </h2>
+                <button type="button" class="post__like-button"></button>
+              </div>
+            </li>
+            <li class="post">
+              <img
+                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                alt="Tunnel with morning light"
+                class="post__media"
+              />
+              <div class="post__engagement-section">
+                <h2 class="post__caption">Tunnel with morning light</h2>
+                <button type="button" class="post__like-button"></button>
+              </div>
+            </li>
+            <li class="post">
+              <img
+                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Mountain House"
+                class="post__media"
+              />
+              <div class="post__engagement-section">
+                <h2 class="post__caption">Mountain House</h2>
+                <button type="button" class="post__like-button"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">2025 &copy; Spots</p>
+      </footer>
+    </div>
+  </body>
+</html>

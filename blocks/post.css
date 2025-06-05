@@ -1,0 +1,54 @@
+.post {
+  margin: 0 auto;
+}
+
+.post__media {
+  width: 413px;
+  height: 413px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px;
+  border-radius: 8px;
+}
+
+.post__engagement-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post__caption {
+  max-width: 347px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.post__like-button {
+  width: 23px;
+  height: 20px;
+  padding: 0;
+  background: transparent url(../images/like.svg);
+  border: none;
+  opacity: 40%;
+  cursor: pointer;
+}
+
+.post__like-button:hover {
+  opacity: 100%;
+}
+
+@media screen and (max-width: 629px) {
+  .post__media {
+    width: 288px;
+    height: 288px;
+  }
+  .post__caption {
+    max-width: 242px;
+    font-size: 16px;
+  }
+}
