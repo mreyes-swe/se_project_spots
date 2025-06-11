@@ -6,6 +6,8 @@
 }
 
 .profile__avatar {
+  width: 190px;
+  height: 190px;
   margin: 0 20px 0 0;
   border-radius: 8px;
 }
@@ -17,6 +19,7 @@
 }
 
 .profile__name {
+  max-width: 420px;
   margin: 0 0 12px;
   display: -webkit-box;
   overflow: hidden;
@@ -30,6 +33,7 @@
 }
 
 .profile__bio {
+  max-width: 420px;
   margin: 0;
   display: -webkit-box;
   opacity: 70%;

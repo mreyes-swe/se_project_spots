@@ -2,6 +2,10 @@
 
 Spots is a social media web application where users can share and explore images in a clean, responsive layout. Built using semantic HTML5 and CSS3, the platform is designed to work seamlessly across both desktop and mobile devices.
 
+## Overview Video
+
+[Watch the Overview Video Here](https://drive.google.com/file/d/1vUKplPmF-9cMAfAGBipIYXM3rodHh-WK/view?usp=sharing)
+
 ## Tech Stack
 
 - HTML5
