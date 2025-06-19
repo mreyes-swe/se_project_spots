@@ -32,7 +32,7 @@
   -webkit-box-orient: vertical;
 }
 
-.profile__bio {
+.profile__description {
   max-width: 420px;
   margin: 0;
   display: -webkit-box;
