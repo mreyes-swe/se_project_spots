@@ -38,74 +38,16 @@
         </section>
         <section class="posts page__section">
           <ul class="posts__grid">
-            <li class="post">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens"
-                class="post__media"
-              />
-              <div class="post__engagement-section">
-                <h2 class="post__caption">Val Thorens</h2>
-                <button type="button" class="post__like-button"></button>
-              </div>
-            </li>
-            <li class="post">
-              <img
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="Restraunt terrace"
-                class="post__media"
-              />
-              <div class="post__engagement-section">
-                <h2 class="post__caption">Restraunt terrace</h2>
-                <button type="button" class="post__like-button"></button>
-              </div>
-            </li>
-            <li class="post">
-              <img
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="An outdoor cafe"
-                class="post__media"
-              />
-              <div class="post__engagement-section">
-                <h2 class="post__caption">An outdoor cafe</h2>
-                <button type="button" class="post__like-button"></button>
-              </div>
-            </li>
-            <li class="post">
-              <img
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="A very long bridge over the forest"
-                class="post__media"
-              />
-              <div class="post__engagement-section">
-                <h2 class="post__caption">
-                  A very long bridge over the forest
-                </h2>
-                <button type="button" class="post__like-button"></button>
-              </div>
-            </li>
-            <li class="post">
-              <img
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Tunnel with morning light"
-                class="post__media"
-              />
-              <div class="post__engagement-section">
-                <h2 class="post__caption">Tunnel with morning light</h2>
-                <button type="button" class="post__like-button"></button>
-              </div>
-            </li>
-            <li class="post">
-              <img
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Mountain House"
-                class="post__media"
-              />
-              <div class="post__engagement-section">
-                <h2 class="post__caption">Mountain House</h2>
-                <button type="button" class="post__like-button"></button>
-              </div>
-            </li>
+            <template id="post-template">
+              <li class="post">
+                <img src="#" alt="" class="post__image" />
+                <div class="post__engagement-section">
+                  <h2 class="post__caption"></h2>
+                  <button type="button" class="post__like-button"></button>
+                </div>
+                <button type="button" class="post__delete-button"></button>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -166,6 +108,16 @@
             </label>
             <button type="submit" class="modal__save-button">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal modal_type_preview" id="preview-post-modal">
+        <div class="modal__post-container">
+          <button
+            type="button"
+            class="modal__close-button modal__close-button_type_preview"
+          ></button>
+          <img src="#" alt="" class="modal__post-image" />
+          <p class="modal__post-caption">Golden Gate bridge</p>
         </div>
       </div>
     </div>
