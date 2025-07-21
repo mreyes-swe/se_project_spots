@@ -36,21 +36,21 @@
   padding: 0;
   background: transparent url(../images/like.svg);
   border: none;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
 }
 
 .post__like-button:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .post__like-button_state_liked {
   background: transparent url(../images/liked.svg) no-repeat;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .post__like-button_state_liked:hover {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .post__delete-button {

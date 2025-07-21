@@ -36,7 +36,7 @@
   max-width: 420px;
   margin: 0;
   display: -webkit-box;
-  opacity: 70%;
+  opacity: 0.7;
   overflow: hidden;
   font-size: 16px;
   font-weight: 500;
@@ -57,7 +57,7 @@
   padding: 0;
   background-color: transparent;
   border: none;
-  opacity: 70%;
+  opacity: 0.7;
   font-size: 16px;
   font-weight: 500;
   color: #212121;
@@ -65,7 +65,7 @@
 }
 
 .profile__edit-profile-button:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .profile__new-post-button {
@@ -88,7 +88,7 @@
 }
 
 .profile__new-post-button:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 629px) {

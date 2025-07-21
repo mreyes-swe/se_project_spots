@@ -45,23 +45,23 @@
   right: 50px;
   background: url(../images/x.svg);
   border: none;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
 }
 
 .modal__close-button:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .modal__close-button_type_preview {
   top: 0;
   right: -52.5px;
   background: url(../images/x-white.svg);
-  opacity: 100%;
+  opacity: 1;
 }
 
 .modal__close-button_type_preview:hover {
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__title {
@@ -118,28 +118,28 @@
   font-size: 20px;
   font-weight: 500;
   color: #212121;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal__input::-webkit-input-placeholder {
   font-size: 20px;
   font-weight: 500;
   color: #212121;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal__input::-moz-placeholder {
   font-size: 20px;
   font-weight: 500;
   color: #212121;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal__input::-ms-input-placeholder {
   font-size: 20px;
   font-weight: 500;
   color: #212121;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal__error {

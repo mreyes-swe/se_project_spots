@@ -5,7 +5,7 @@
 .footer__copyright {
   margin: 0 auto;
   max-width: 105px;
-  opacity: 70%;
+  opacity: 0.7;
   font-size: 16px;
   font-weight: 400;
   color: #212121;
