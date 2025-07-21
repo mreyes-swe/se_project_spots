@@ -43,6 +43,9 @@ const editProfileNameInput = editProfileModal.querySelector(
 const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
+const editProfileSaveButton = editProfileModal.querySelector(
+  ".modal__save-button"
+);
 
 const newPostButton = document.querySelector(".profile__new-post-button");
 const newPostModal = document.querySelector("#new-post-modal");
@@ -52,6 +55,7 @@ const newPostImageLinkInput = newPostModal.querySelector(
   "#post-image-link-input"
 );
 const newPostCaptionInput = newPostModal.querySelector("#post-caption-input");
+const newPostSaveButton = newPostModal.querySelector(".modal__save-button");
 
 const profileNameElement = document.querySelector(".profile__name");
 const profileDescriptionElement = document.querySelector(
@@ -75,6 +79,25 @@ const previewPostCloseButton = previewPostModal.querySelector(
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+
+  function handleOverlayClick(event) {
+    if (event.target === modal) {
+      closeModal(modal);
+      modal.removeEventListener("click", handleOverlayClick);
+      document.removeEventListener("keydown", handleEscKeyPress);
+    }
+  }
+
+  function handleEscKeyPress(event) {
+    if (event.key === "Escape") {
+      closeModal(modal);
+      document.removeEventListener("keydown", handleEscKeyPress);
+      modal.removeEventListener("click", handleOverlayClick);
+    }
+  }
+
+  modal.addEventListener("click", handleOverlayClick);
+  document.addEventListener("keydown", handleEscKeyPress);
 }
 
 function closeModal(modal) {
@@ -83,13 +106,15 @@ function closeModal(modal) {
 
 function handleProfileFormSubmit(event) {
   event.preventDefault();
+  disableSaveButton(editProfileSaveButton, settings);
+  closeModal(editProfileModal);
   profileNameElement.textContent = editProfileNameInput.value;
   profileDescriptionElement.textContent = editProfileDescriptionInput.value;
-  closeModal(editProfileModal);
 }
 
 function handlePostFormSubmit(event) {
   event.preventDefault();
+  disableSaveButton(newPostSaveButton, settings);
   closeModal(newPostModal);
   const inputValues = {
     name: newPostCaptionInput.value,
@@ -97,8 +122,7 @@ function handlePostFormSubmit(event) {
   };
   newPost = getCardElement(inputValues);
   postsList.prepend(newPost);
-  newPostImageLinkInput.value = "";
-  newPostCaptionInput.value = "";
+  newPostForm.reset();
 }
 
 function getCardElement(data) {
@@ -131,6 +155,7 @@ function getCardElement(data) {
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameElement.textContent;
   editProfileDescriptionInput.value = profileDescriptionElement.textContent;
+  checkInputListValidity(editProfileForm, settings);
   openModal(editProfileModal);
 });
 
