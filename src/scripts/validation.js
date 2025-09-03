@@ -74,12 +74,16 @@ const setEventListeners = (formElement, config) => {
     config.saveButtonSelector
   );
 
-  toggleSaveButtonState(inputList, saveButtonElement, config);
+  if (saveButtonElement) {
+    toggleSaveButtonState(inputList, saveButtonElement, config);
+  }
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", () => {
       checkInputValidity(formElement, inputElement, config);
-      toggleSaveButtonState(inputList, saveButtonElement, config);
+      if (saveButtonElement) {
+        toggleSaveButtonState(inputList, saveButtonElement, config);
+      }
     });
   });
 };
@@ -92,4 +96,9 @@ const enableValidation = (config) => {
   });
 };
 
-enableValidation(settings);
+export {
+  enableValidation,
+  settings,
+  checkInputListValidity,
+  disableSaveButton,
+};

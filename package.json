@@ -1,0 +1,41 @@
+{
+  "name": "se_project_spots",
+  "version": "0.1.0",
+  "description": "Spots is a social media web application where users can share and explore images in a clean, responsive layout. Built using semantic HTML5 and CSS3, the platform is designed to work seamlessly across both desktop and mobile devices.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -b gh-pages -D"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mreyes-swe/se_project_spots.git"
+  },
+  "author": "Marcelino Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mreyes-swe/se_project_spots/issues"
+  },
+  "homepage": "https://mreyes-swe.github.io/se_project_spots",
+  "devDependencies": {
+    "@babel/core": "7.18.9",
+    "@babel/preset-env": "7.18.9",
+    "autoprefixer": "10.4.7",
+    "babel-loader": "8.2.5",
+    "clean-webpack-plugin": "4.0.0",
+    "css-loader": "6.7.1",
+    "cssnano": "5.1.12",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.6.1",
+    "postcss-loader": "7.0.1",
+    "webpack": "5.76.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.9.3"
+  },
+  "dependencies": {
+    "core-js": "3.23.5"
+  }
+}
