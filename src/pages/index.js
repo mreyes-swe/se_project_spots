@@ -185,6 +185,7 @@ function handleAvatarFormSubmit(event) {
     .then((data) => {
       disableSaveButton(editAvatarSaveButton, settings);
       profileAvatarElement.src = data.avatar;
+      editAvatarForm.reset();
       closeModal(editAvatarModal);
     })
     .catch(console.error)
@@ -312,8 +313,6 @@ function getCardElement(data) {
 }
 
 editAvatarButton.addEventListener("click", () => {
-  editAvatarLinkInput.value = profileAvatarElement.src;
-  checkInputListValidity(editAvatarForm, settings);
   openModal(editAvatarModal);
 });
 
